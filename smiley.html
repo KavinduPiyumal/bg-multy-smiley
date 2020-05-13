@@ -1,0 +1,60 @@
+<style>
+svg{	
+	background-color:black;
+	margin:0 40%;
+}
+svg:hover{
+	border-radius: 30px;
+	animation: color-me-in 5s infinite; /* other keywords like "infinite alternate" can be useful here */
+}
+@keyframes color-me-in {
+  /* You could think of as "step 1" */
+  25% {
+    background: orange;
+  }
+  /* You could think of as "step 2" */
+  50% {
+    background:red;
+  }
+  /* You could think of as "step 3" */
+  100% {
+    background:blue;
+  }
+}
+</style>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" height="300" width="300">
+
+	<!-- face -->
+	<circle cx="150" cy="150" r="100" stroke="gray" stroke-width="2" fill="gray"/>
+	
+	<!-- mouth -->
+	<path d="M 115,185 a22,20 0 0 0 70,00" fill="red">
+		<animate begin="mouseover" attributeName="d" to="M 105,185 a22,10 0 0 0 90,00" dur="0.5s" fill="freeze" />
+		 <animate begin="mouseout" attributeName="d" to="M 115,185 a22,20 0 0 0 70,00" dur="0.5s" fill="freeze" />
+	</path>
+	
+	<!-- Two teeth -->
+	<polygon points="130,200 128,185 132,185" fill="white" />
+	<polygon points="170,200 168,185 172,185" fill="white"/>
+	
+	<!-- eyebrows -->
+	<path d="M 90 160 q 10 -30 20 0" stroke="#151B54" stroke-width="3" fill="none">
+  		 <animate begin="mouseover" attributeName="d" to="M 75 150 q 10 -10 40 0" dur="0.5s"/>
+		 <animate begin="mouseout" attributeName="d" to="M 90 160 q 10 -30 20 0" dur="0.5s"/> 
+  	</path>
+  	<path d="M 190 160 q 10 -30 20 0" stroke="#151B54" stroke-width="3" fill="none">
+  	<animate begin="mouseover" attributeName="d" to="M 175 150 q 10 -10 40 0" dur="0.5s"/>
+		 <animate begin="mouseout" attributeName="d" to="M 190 160 q 10 -30 20 0" dur="0.5s"/>
+  	</path>
+	
+
+ 	<!-- nose -->
+	<path d="M 129 160 Q150 135 170 160 M 129 160 L125 150 H175 M 125 150 Q150 135 175 150 L171 160 M171 160 Q150 190 127 160" stroke="#493D26" fill="#493D26"/>
+	<path d="M 175 157 Q150 155 168 170" stroke="gray" fill="gray"/>
+	<path d="M 125 157 Q150 155 132 170" stroke="gray" fill="gray"/>
+
+</svg>
+
+
